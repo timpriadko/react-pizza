@@ -1,9 +1,10 @@
 import React from 'react';
-import logoSvg from './assets/img/pizza-logo.svg';
+import logoSvg from '../assets/img/pizza-logo.svg';
 
 import Button from './Button';
 
 function Header() {
+    const click = () => { alert('dfasdf') };
     return (
         <div className="header">
             <div className="container">
@@ -12,11 +13,12 @@ function Header() {
                     <div>
                         <h1>React Pizza</h1>
                         <p>самая вкусная пицца во вселенной</p>
-                        <Button outline>Кнопка</Button>
+                        <Button outline onClick={click}>Кнопка</Button>
                     </div>
                 </div>
                 <div className="header__cart">
-                    <a href="/cart.html" className="button button--cart">
+                    <Button className='button--cart'>
+
                         <span>520 ₽</span>
                         <div className="button__delimiter"></div>
                         <svg
@@ -49,7 +51,9 @@ function Header() {
                             />
                         </svg>
                         <span>3</span>
-                    </a>
+                    </Button>
+                    {/* <a href="/cart.html" className="button button--cart">
+                    </a> */}
                 </div>
             </div>
         </div>
