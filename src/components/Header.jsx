@@ -13,7 +13,6 @@ function Header() {
                     <div>
                         <h1>React Pizza</h1>
                         <p>самая вкусная пицца во вселенной</p>
-                        <Button outline onClick={click}>Кнопка</Button>
                     </div>
                 </div>
                 <div className="header__cart">
