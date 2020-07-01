@@ -18,7 +18,12 @@ function App() {
                 'Закрытые',
               ]}
             />
-            <SortPopup />
+            <SortPopup onClickItem={(name) => console.log(name)}
+              items={[
+                'популярности',
+                'цене',
+                'алфавиту'
+              ]} />
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
