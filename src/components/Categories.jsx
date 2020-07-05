@@ -40,8 +40,6 @@ function Categories({ items, onClickItem }) {
         setActiveItem(index);
     }
 
-    console.log(activeItem, setActiveItem)
-
     return (
         <div className="categories">
             <ul>
