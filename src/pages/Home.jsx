@@ -17,9 +17,18 @@ function Home({ items }) {
                 />
                 <SortPopup onClickItem={(name) => console.log(name)}
                     items={[
-                        'популярности',
-                        'цене',
-                        'алфавиту'
+                        {
+                            name: 'популярности',
+                            type: 'popular'
+                        },
+                        {
+                            name: 'цене',
+                            type: 'price'
+                        },
+                        {
+                            name: 'алфавит',
+                            type: 'alphabet'
+                        },
                     ]} />
             </div>
             <h2 className="content__title">Все пиццы</h2>
