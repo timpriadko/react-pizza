@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { Header } from './components';
 import { Home, Cart } from './pages';
 import { Route } from 'react-router-dom';
 import { setPizzas } from './redux/actions/pizzas';
 
-function App({ items }) {
+function App() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
@@ -20,19 +20,11 @@ function App({ items }) {
     <div className="wrapper">
       <Header />
       <div className="content">
-        <Route path="/" render={() => <Home items={items} />} exact />
+        <Route path="/" component={Home} exact />
         <Route path="/cart" component={Cart} exact />
       </div>
     </div>
   )
 }
-
-// (state) => {
-//   console.log(state)
-//   return {
-//     items: state.pizzas.items,
-//     filters: state.filters,
-//   }
-// }
 
 export default App;
